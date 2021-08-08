@@ -26,9 +26,13 @@ public class Radio {
     }
 
     public int getNumberRadioStationAboveMax() {
-        currentNumberRadioStation = maxNumberRadioStation + 1;
-        return minNumberRadioStation;
+        if (currentNumberRadioStation > maxNumberRadioStation + 1) {
+            currentNumberRadioStation = minNumberRadioStation;
+
+        }
+        return currentNumberRadioStation;
     }
+
 
 
     public int getNumberRadioStationLessMin() {
