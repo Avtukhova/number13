@@ -27,9 +27,8 @@ public class RadioTest {
         rad.getNumberRadioStationAboveMax();
 
         int expected = rad.minNumberRadioStation;
-        rad.currentNumberRadioStation = 10;
 
-        int actual = rad.minNumberRadioStation;
+        int actual = rad.currentNumberRadioStation;
 
         assertEquals(expected, actual);
 
@@ -41,7 +40,7 @@ public class RadioTest {
 
         rad.getNumberRadioStationLessMin();
 
-        int expected = rad.currentNumberRadioStation = 9;
+        int expected = rad.maxNumberRadioStation;
         int actual = rad.currentNumberRadioStation;
 
         assertEquals(expected, actual);
@@ -82,7 +81,7 @@ public class RadioTest {
 
         rad.getNumberVolumeAboveMax();
 
-        int expected = rad.currentNumberVolume = 10;
+        int expected = rad.maxNumberVolume;
         int actual = rad.currentNumberVolume;
 
         assertEquals(expected, actual);
@@ -95,7 +94,7 @@ public class RadioTest {
 
         rad.getNumberVolumeLessMin();
 
-        int expected = rad.currentNumberVolume = 0;
+        int expected = rad.minNumberVolume;
         int actual = rad.currentNumberVolume;
 
         assertEquals(expected, actual);

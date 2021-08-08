@@ -26,7 +26,7 @@ public class Radio {
     }
 
     public int getNumberRadioStationAboveMax() {
-        if (currentNumberRadioStation > maxNumberRadioStation + 1) {
+        if (currentNumberRadioStation > maxNumberRadioStation) {
             currentNumberRadioStation = minNumberRadioStation;
 
         }
@@ -37,7 +37,7 @@ public class Radio {
 
     public int getNumberRadioStationLessMin() {
            if (currentNumberRadioStation < minNumberRadioStation) {
-            currentNumberRadioStation = 9;
+            currentNumberRadioStation = maxNumberRadioStation;
 
         }
         return currentNumberRadioStation;
@@ -64,7 +64,7 @@ public class Radio {
 
     public int getNumberVolumeAboveMax() {
         if (currentNumberVolume > maxNumberVolume) {
-            currentNumberVolume = 10;
+            currentNumberVolume = maxNumberVolume;
         }
         return currentNumberVolume;
 
@@ -72,7 +72,7 @@ public class Radio {
 
     public int getNumberVolumeLessMin() {
         if (currentNumberVolume < minNumberVolume) {
-            currentNumberVolume = 0;
+            currentNumberVolume = minNumberVolume;
 
         }
         return currentNumberVolume;
