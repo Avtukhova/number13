@@ -15,7 +15,6 @@ public class Radio {
     public int[] numbersVolume = {-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
 
 
-
     public int getIncreaseNumberRadioStation() {
         for (int numberRadioStation : numbersRadioStation) {
             if (numberRadioStation < 9)
@@ -27,16 +26,13 @@ public class Radio {
     }
 
     public int getNumberRadioStationAboveMax() {
-        if (currentNumberRadioStation > maxNumberRadioStation) {
-            currentNumberRadioStation = 0;
-
-        }
-        return currentNumberRadioStation;
-
+        currentNumberRadioStation = maxNumberRadioStation + 1;
+        return minNumberRadioStation;
     }
 
+
     public int getNumberRadioStationLessMin() {
-        if (currentNumberRadioStation < minNumberRadioStation) {
+           if (currentNumberRadioStation < minNumberRadioStation) {
             currentNumberRadioStation = 9;
 
         }

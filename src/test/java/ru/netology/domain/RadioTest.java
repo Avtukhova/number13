@@ -26,8 +26,8 @@ public class RadioTest {
 
         rad.getNumberRadioStationAboveMax();
 
-        int expected = rad.currentNumberRadioStation = 0;
-        int actual = rad.currentNumberRadioStation;
+        int expected = rad.currentNumberRadioStation;
+        int actual = rad.minNumberRadioStation;
 
         assertEquals(expected, actual);
 
