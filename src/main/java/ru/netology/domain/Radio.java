@@ -6,10 +6,16 @@ public class Radio {
     public int maxNumberRadioStation = 9;
     public int numberCount = 0;
     public int currentNumberRadioStation;
+    public int numberVolume = 0;
+    public int numberVolumeCount = 0;
+    public int currentNumberVolume;
+    public int minNumberVolume = 0;
+    public int maxNumberVolume = 10;
     public int[] numbersRadioStation = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    public int[] numbersVolume = {-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
 
 
-    public int setIncreaseNumberRadioStation() {
+    public int getIncreaseNumberRadioStation() {
         for (int numberRadioStation : numbersRadioStation) {
             if (numberRadioStation < 9)
                 numberCount++;
@@ -19,7 +25,7 @@ public class Radio {
         return numberCount - 1;
     }
 
-    public int setNumberRadioStationAboveMax() {
+    public int getNumberRadioStationAboveMax() {
         if (currentNumberRadioStation > maxNumberRadioStation) {
             currentNumberRadioStation = 0;
 
@@ -28,7 +34,7 @@ public class Radio {
 
     }
 
-    public int setNumberRadioStationLessMin() {
+    public int getNumberRadioStationLessMin() {
         if (currentNumberRadioStation < minNumberRadioStation) {
             currentNumberRadioStation = 9;
 
@@ -43,9 +49,36 @@ public class Radio {
 
         }
         return currentNumberRadioStation;
+    }
+
+    public int getIncreaseVolume() {
+        for (int numberVolume : numbersVolume) {
+            if (numberVolume < 10)
+                numberVolumeCount++;
+
         }
 
+        return numberVolumeCount - 1;
     }
+
+    public int getNumberVolumeAboveMax() {
+        if (currentNumberVolume > maxNumberVolume) {
+            currentNumberVolume = maxNumberVolume;
+        }
+        return currentNumberVolume;
+
+    }
+
+    public int getNumberVolumeLessMin() {
+        if (currentNumberVolume < minNumberVolume) {
+            currentNumberVolume = minNumberVolume;
+
+        }
+        return currentNumberVolume;
+
+    }
+
+}
 
 
 
