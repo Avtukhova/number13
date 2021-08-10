@@ -31,8 +31,14 @@ public class Radio {
         this.currentNumberRadioStation = currentNumberRadioStation;
     }
 
-    public void setMaxNumberRadioStation(int maxNumberRadioStation) {
-        this.maxNumberRadioStation = maxNumberRadioStation;
+    public void setCurrentNumberVolume(int currentNumberVolume) {
+        if (currentNumberVolume < minNumberVolume) {
+            return;
+        }
+        if (currentNumberVolume > maxNumberVolume) {
+            return;
+        }
+        this.currentNumberVolume = currentNumberVolume;
     }
 
     public void setMinNumberRadioStation(int minNumberRadioStation) {
@@ -51,24 +57,6 @@ public class Radio {
         return currentNumberVolume;
     }
 
-    public void setMaxNumberVolume(int maxNumberVolume) {
-        this.maxNumberVolume = maxNumberVolume;
-    }
-
-    public void setMinNumberVolume(int minNumberVolume) {
-        this.minNumberVolume = minNumberVolume;
-    }
-
-    public void setCurrentNumberVolume(int currentNumberVolume) {
-        if (currentNumberVolume < minNumberVolume) {
-            return;
-        }
-        if (currentNumberVolume > maxNumberVolume) {
-            return;
-        }
-        this.currentNumberVolume = currentNumberVolume;
-    }
-
     public void increaseNumberRadioStation() {
         if (currentNumberRadioStation == maxNumberRadioStation) {
             this.currentNumberRadioStation = minNumberRadioStation;
@@ -78,12 +66,9 @@ public class Radio {
 
     }
 
-
     public void increaseNumberRadioStationOverMax() {
         if (currentNumberRadioStation == maxNumberRadioStation) {
             this.currentNumberRadioStation = minNumberRadioStation;
-        } else {
-            currentNumberRadioStation++;
         }
 
     }
@@ -91,8 +76,6 @@ public class Radio {
     public void increaseNumberRadioStationLessMin() {
         if (currentNumberRadioStation == minNumberRadioStation) {
             this.currentNumberRadioStation = maxNumberRadioStation;
-        } else {
-            currentNumberRadioStation++;
         }
 
     }
@@ -119,6 +102,7 @@ public class Radio {
         }
 
     }
+
 
 }
 
