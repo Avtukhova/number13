@@ -141,61 +141,10 @@ public class RadioTest {
         assertEquals(expected, actual);
 
     }
-    @Test
-    public void shouldIncreaseNumberRadioStationOverMax() {
-        Radio rad = new Radio();
-        rad.setCurrentNumberRadioStation(9);
 
-        rad.increaseNumberRadioStationOverMax();
 
-        int expected = 0;
-        int actual = rad.getCurrentNumberRadioStation();
 
-        assertEquals(expected, actual);
 
-    }
-
-    @Test
-    public void shouldIncreaseNumberRadioStationOverMax2() {
-        Radio rad = new Radio();
-        rad.setCurrentNumberRadioStation(8);
-
-        rad.increaseNumberRadioStationOverMax();
-
-        int expected = 8;
-        int actual = rad.getCurrentNumberRadioStation();
-
-        assertEquals(expected, actual);
-
-    }
-
-    @Test
-    public void shouldIncreaseNumberRadioStationLessMin() {
-        Radio rad = new Radio();
-        rad.setCurrentNumberRadioStation(0);
-
-        rad.increaseNumberRadioStationLessMin();
-
-        int expected = 9;
-        int actual = rad.getCurrentNumberRadioStation();
-
-        assertEquals(expected, actual);
-
-    }
-
-    @Test
-    public void shouldIncreaseNumberRadioStationLessMin2() {
-        Radio rad = new Radio();
-        rad.setCurrentNumberRadioStation(1);
-
-        rad.increaseNumberRadioStationLessMin();
-
-        int expected = 1;
-        int actual = rad.getCurrentNumberRadioStation();
-
-        assertEquals(expected, actual);
-
-    }
 
     @Test
     public void shouldIncreaseNumberVolume() {
@@ -351,61 +300,7 @@ public class RadioTest {
 
     }
 
-    @Test
-    public void shouldIncreaseNumberVolumeOverMax() {
-        Radio rad = new Radio();
-        rad.setCurrentNumberVolume(10);
 
-        rad.increaseNumberVolumeOverMax();
-
-        int expected = 10;
-        int actual = rad.getCurrentNumberVolume();
-
-        assertEquals(expected, actual);
-
-    }
-
-    @Test
-    public void shouldIncreaseNumberVolumeOverMax2() {
-        Radio rad = new Radio();
-        rad.setCurrentNumberVolume(8);
-
-        rad.increaseNumberVolumeOverMax();
-
-        int expected = 8;
-        int actual = rad.getCurrentNumberVolume();
-
-        assertEquals(expected, actual);
-
-    }
-
-    @Test
-    public void shouldIncreaseNumberVolumeLessMin() {
-        Radio rad = new Radio();
-        rad.setCurrentNumberVolume(0);
-
-        rad.increaseNumberVolumeLessMin();
-
-        int expected = 0;
-        int actual = rad.getCurrentNumberVolume();
-
-        assertEquals(expected, actual);
-
-    }
-
-    @Test
-    public void shouldIncreaseNumberVolumeLessMin2() {
-        Radio rad = new Radio();
-        rad.setCurrentNumberVolume(3);
-
-        rad.increaseNumberVolumeLessMin();
-
-        int expected = 3;
-        int actual = rad.getCurrentNumberVolume();
-
-        assertEquals(expected, actual);
-
-    }
 
     @Test
     public void shouldMinNumberRadioStation() {

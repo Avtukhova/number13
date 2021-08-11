@@ -66,45 +66,17 @@ public class Radio {
 
     }
 
-    public void increaseNumberRadioStationOverMax() {
-        if (currentNumberRadioStation == maxNumberRadioStation) {
-            this.currentNumberRadioStation = minNumberRadioStation;
-        }
-
-    }
-
-    public void increaseNumberRadioStationLessMin() {
-        if (currentNumberRadioStation == minNumberRadioStation) {
-            this.currentNumberRadioStation = maxNumberRadioStation;
-        }
-
-    }
-
-    public void increaseNumberVolume() {
+      public void increaseNumberVolume() {
         if (currentNumberVolume < maxNumberVolume) {
             currentNumberVolume++;
         }
 
     }
 
-    public void increaseNumberVolumeOverMax() {
-        if (currentNumberVolume == maxNumberVolume);
-        {
-            return;
-        }
-
-    }
-
-    public void increaseNumberVolumeLessMin() {
-        if (currentNumberVolume == minNumberVolume);
-        {
-            return;
-        }
-
-    }
-
 
 }
+
+
 
 
 
