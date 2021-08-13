@@ -73,6 +73,19 @@ public class Radio {
 
     }
 
+    public void decreaseNumberRadioStation() {
+        if (currentNumberRadioStation > minNumberRadioStation) {
+            currentNumberRadioStation--;
+        }
+    }
+
+
+    public void decreaseVolume() {
+        if (currentNumberVolume > minNumberVolume) {
+            currentNumberVolume--;
+        }
+    }
+
 
 }
 
