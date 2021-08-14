@@ -512,6 +512,20 @@ public class RadioTest {
 
     }
 
+    @Test
+    public void shouldDecreaseVolumeC() {
+        Radio rad = new Radio();
+        rad.setCurrentNumberVolume(0);
+
+        rad.decreaseVolume();
+
+        int expected = 0;
+        int actual = rad.getCurrentNumberVolume();
+
+        assertEquals(expected, actual);
+
+    }
+
 
 
 
