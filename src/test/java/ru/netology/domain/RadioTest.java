@@ -20,18 +20,18 @@ public class RadioTest {
     @Test
     public void shouldIncreaseNumberRadioStation2() {
         Radio rad = new Radio();
-        rad.setCurrentNumberRadioStation(9);
+        rad.setCurrentNumberRadioStation(8);
 
         rad.increaseNumberRadioStation();
 
-        assertEquals(10, rad.getCurrentNumberRadioStation());
+        assertEquals(9, rad.getCurrentNumberRadioStation());
 
     }
 
     @Test
     public void shouldIncreaseNumberRadioStation3() {
         Radio rad = new Radio();
-        rad.setCurrentNumberRadioStation(10);
+        rad.setCurrentNumberRadioStation(9);
 
         rad.increaseNumberRadioStation();
 
@@ -42,11 +42,11 @@ public class RadioTest {
     @Test
     public void shouldDecreaseNumberRadioStation1() {
         Radio rad = new Radio();
-        rad.setCurrentNumberRadioStation(10);
+        rad.setCurrentNumberRadioStation(9);
 
         rad.decreaseNumberRadioStation();
 
-        assertEquals(9, rad.getCurrentNumberRadioStation());
+        assertEquals(8, rad.getCurrentNumberRadioStation());
 
     }
 
@@ -68,7 +68,7 @@ public class RadioTest {
 
         rad.decreaseNumberRadioStation();
 
-        assertEquals(10, rad.getCurrentNumberRadioStation());
+        assertEquals(9, rad.getCurrentNumberRadioStation());
 
     }
 
@@ -142,11 +142,11 @@ public class RadioTest {
     @Test
     public void shouldMaxNumberRadioStation() {
         Radio rad = new Radio();
-        rad.setCurrentNumberRadioStation(10);
+        rad.setCurrentNumberRadioStation(9);
 
         rad.getMaxNumberRadioStation();
 
-        assertEquals(10, rad.getCurrentNumberRadioStation());
+        assertEquals(9, rad.getCurrentNumberRadioStation());
 
     }
 
